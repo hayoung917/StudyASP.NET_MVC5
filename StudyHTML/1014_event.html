@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이벤트 예제</title>
+        <script>
+            window.onload = function() {
+                var button = document.getElementById("button1");
+                
+                // 3
+                // button.onclick = function() {
+                //     alert("익명 함수");
+                // }
+
+                // 4
+                button.onclick = buttonClick;
+
+                var link = document.getElementById("link");
+                link.onclick = function () { // 클릭 불가능하게 만들기 -> 이벤트 제거
+                    return false;
+                }
+            };
+            // 2
+            function buttonClick() {
+                alert("20200807 Changed!!");
+            }
+        </script>
+    </head>
+    <body>
+        <!-- 1 -->
+        <!-- <input type="button" value="First Button" onclick="alert('First Button Click');"/> -->
+        <!-- 2 -->
+        <!-- <input type="button" value="First Button" onclick="buttonClick();"/> -->
+        <!-- 3 -->
+        <input id="button1" type="button" value="First Button"/>
+        <!-- 1 -->
+        <button onclick="alert('Second Button Click');">Second Button</button><br>
+        <a href="https://www.naver.com" id="link">네이버</a>
+    </body>
+</html>

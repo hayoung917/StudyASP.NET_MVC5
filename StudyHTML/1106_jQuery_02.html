@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>jQuery example</title>
+        <script src="js/jquery-3.5.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("img").attr({
+                    alt: "jQuery img attribute",
+                    //height: 200, // 설정 안하면 사이즈만큼 자동으로 늘어남
+                    src: function(index) { // 하나씩 넣어가면서 개수가 index가 된다...
+                        // 변수
+                        var wSize = (index + 1) * (100);
+                        return "http://placehold.it/" + wSize + "x100";
+                    }
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <img /><img /><img /><br>
+        <h1>Test</h1>
+        <img />
+    </body>
+</html>

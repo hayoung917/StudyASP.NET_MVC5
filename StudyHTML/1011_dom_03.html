@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf8">
+        <title>DOM example</title>
+        <script>
+            window.onload = function () {
+                // 01. setAttribute, getAttribute
+                // var image = document.getElementById("image");
+                // image.width = 640; // image.setAttribute("width", "640"); // 이런식으로도 선언 가능
+                // image.height = 400; // image.setAttribute("height", "400");
+                // image.src="http://placehold.it/640x400"; // image.setAttribute("src", "http://placehold.it/640x400");
+
+                // document.body.setAttribute("data-custom", "HelloJs"); // body에 data-custom="HelloJs" 추가 -> <body data-custom="HelloJs">
+                // var dataCustom = document.body.getAttribute("data-custom");
+                // //alert(dataCustom);
+
+                // 02. Timer
+                var clock = document.getElementById("clock");
+                setInterval(function() {
+                    var now = new Date();
+                    clock.innerHTML = now.toString();
+                }, 1000);
+            }
+        </script>
+    </head>
+    <body>
+        <!-- 01 -->
+        <!-- <img id="image"> -->
+        <!-- 02 -->
+        <h1 id="clock"></h1>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>jQuery example</title>
+        <script src="js/jquery-3.5.1.js"> // src="https://code.jquery.com/jquery-3.5.1.js" 도 가능</script>
+        <script>
+            // window.onload 와 같은 기능 -> jQuery 사용을 위한 세팅
+            $(document).ready(function () {
+                // 01. selector
+                $("h1").css("color", "rgb(255,255,255)");
+                $("h1").css("background-color", "black");
+
+                // 02. attr (js getAttribute)
+                var src = $("script").attr("src");
+                alert("jQuery link = " + src);
+
+                // 03. attr set, css set 우선순위 css > attr
+                var img = $("img");
+                //img.css("width", "320px");
+                img.css("height", "200px");
+                img.attr("src", "http://placehold.it/320x200");
+                img.attr("width", "400px"); // width 보다 css의 style 우선 적용
+
+                img.css("content", "url(http://placehold.it/640x400)");
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Heading 1st</h1>
+        <h1>Heading 2nd</h1>
+        <h1>Heading 3rd</h1>
+
+        <img width="100" height="100"/> <!-- 옛날방식 -->
+        <img style="height: 100px;"/>
+        <img style="width: 100px; height: 100px;"/>
+    </body>
+</html>

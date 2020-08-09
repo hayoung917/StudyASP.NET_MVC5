@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf8">
+        <title>DOM example</title>
+        <script>
+            window.onload = function () {
+                // 변수 선언
+                // 01. 코딩을 위한 h1 생성
+                // var output = "";
+                // for (let index = 0; index < 10; index++) {
+                //     output += "<h1>header - " + index + "</h1>"; 
+                // }
+                
+                // document.body.innerHTML = output; // body에 내용 추가하기
+                // //document.body.innerText = output; // body에 텍스트로 출력하기 (추가 x - 위의 내용 사라짐.)
+                // //document.body.textContent = output; // body에 텍스트로 출력하기 위에꺼랑 같은일을 한다.
+
+                // 02. gradation div
+                var output = "";
+                for (let i = 0; i < 256; i++) {
+                    output += "<div></div>";
+                }
+                document.body.innerHTML = output;
+
+                var divs = document.querySelectorAll("div");
+                for (let i = 0; i < divs.length; i++) {
+                    var div = divs[i];
+
+                    // 스타일 적용
+                    div.style.height = "2px";
+                    div.style.backgroundColor = "rgb(" + i + ", " + i + ", " + i + ")";
+                    //div.style.backgroundColor = "rgb(" + i + ", " + 255 + ", " + i + ")";
+                 }
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

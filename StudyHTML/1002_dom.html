@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf8">
+        <title>DOM example</title>
+        <!-- <script>
+            // 에러 -> 실행 순서가 중요하다
+            // javascript에서 태그의 스타일을 변경하는 법
+            document.querySelector('h1').style.backgroundColor = 'red';
+            document.querySelector('h2').style.color = 'red';
+        </script> -->
+        <script>
+            // 해결방법 2
+            window.onload = function () {
+                // document.querySelector('h1').style.backgroundColor = 'red';
+                // document.querySelector('h2').style.color = 'blue';
+
+                // 01. getElementById
+                // var selector = document.getElementById("selector");
+                // selector.style.backgroundColor = "green";
+                // selector.style.color = "white";
+                // selector.innerHTML = "Javascript changed";
+
+                // 02. querySelector
+                // var header = document.querySelector("h1");
+                // header.style.backgroundColor = "red";
+                // header.style.color = "yellow";
+                // header.innerHTML = "한글로 보내요";
+
+                // 03. querySelectorAll
+                var headers = document.querySelectorAll("h1");
+                
+                for (let index = 0; index < headers.length; index++) {
+                    var header = headers[index];
+                    header.style.backgroundColor = "green";
+                    header.style.color = "white";
+                    header.innerHTML = "From javascript : " + index;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <h1 id="selector">Test</h1>
+    </body>
+    <!-- <script>
+        // 해결방법 1
+        document.querySelector('h1').style.backgroundColor = 'red';
+        document.querySelector('h2').style.color = 'red';
+    </script> -->
+</html>

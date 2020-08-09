@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf8"> <!--한글 깨지는거 방지-->
+        <title>javascript example</title>
+        <script>
+            // 객체 선언
+            // var product = {
+            //     제품명: "7D 건조 망고",
+            //     유형: "당절임",
+            //     성분: "망고, 설탕, 메타중이황산나트륨, 치자황색소",
+            //     원산지: "필리핀"
+            // };
+
+            // // alert(typeof(product));
+            // // alert(product["제품명"] + " / " + product.원산지);
+            
+            // var result = "";
+            // for (const key in product) {
+            //     if (product.hasOwnProperty(key)) {
+            //         // alert(key + " : " + product[key]);
+            //         result += key + " : " + product[key] + "\n";
+            //     }
+            // }
+            // alert(result);
+
+            // 객체 선언2
+            var person = {
+                name: "Seob",
+                have: function (food) {
+                    alert(this.name + "이(가) " + food + "을(를) 먹습니다.");
+                }
+            }
+            person.have("밥");
+        </script>
+    </head>
+</html>
